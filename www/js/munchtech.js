@@ -71,6 +71,7 @@ var feedrefresh = $$('.pull-to-refresh-content');
 
 // Add 'refresh' listener on it
 feedrefresh.on('refresh', function (e) {
+    $("#feed-list").empty();
     loadMainFeed();
     setTimeout(function(){
         munchtech.pullToRefreshDone();
