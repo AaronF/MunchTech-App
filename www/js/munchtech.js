@@ -91,7 +91,7 @@ function loadMainFeed(){
             // munchtech.showPreloader('Custom Title');
         },
         success: function(data){
-            alert(JSON.stringify(data));
+            console.log(JSON.stringify(data));
             $list = $("#feed-list");
             $list.empty();
             var items = data.responseData.feed.entries;
@@ -111,6 +111,7 @@ function loadMainFeed(){
                     listAppend += "</div>";
                     listAppend += "<div class='card-footer'>";
                         listAppend += "<a href='#' class='link'>More</a>";
+                        listAppend += "<a href='#' class='link right'>Play</a>";
                     listAppend += "</div>";
                 listAppend += "</div>";
 

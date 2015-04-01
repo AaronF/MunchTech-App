@@ -17,6 +17,18 @@
             "id": "org.apache.cordova.device-orientation"
         }
     },
+    "org.apache.cordova.media": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.media"
+        }
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.file"
+        }
+    },
     "org.apache.cordova.dialogs": {
         "source": {
             "type": "registry",
@@ -39,18 +51,6 @@
         "source": {
             "type": "registry",
             "id": "org.apache.cordova.console"
-        }
-    },
-    "org.apache.cordova.media": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.media"
-        }
-    },
-    "org.apache.cordova.file": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.file"
         }
     }
 }

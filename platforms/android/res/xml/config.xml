@@ -19,6 +19,13 @@
     <feature name="Compass">
         <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
     </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
     </feature>
@@ -28,12 +35,5 @@
     </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Media">
-        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
     </feature>
 </widget>

@@ -44,6 +44,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.media/www/MediaError.js",
+        "id": "org.apache.cordova.media.MediaError",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.media/www/Media.js",
+        "id": "org.apache.cordova.media.Media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
         "id": "org.apache.cordova.dialogs.notification",
         "merges": [
@@ -76,20 +90,6 @@ module.exports = [
         "id": "org.apache.cordova.console.logger",
         "clobbers": [
             "cordova.logger"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.media/www/MediaError.js",
-        "id": "org.apache.cordova.media.MediaError",
-        "clobbers": [
-            "window.MediaError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.media/www/Media.js",
-        "id": "org.apache.cordova.media.Media",
-        "clobbers": [
-            "window.Media"
         ]
     },
     {
@@ -245,11 +245,11 @@ module.exports.metadata =
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.network-information": "0.2.15",
     "org.apache.cordova.device-orientation": "0.3.11",
+    "org.apache.cordova.media": "0.2.16",
     "org.apache.cordova.dialogs": "0.3.0",
     "org.apache.cordova.splashscreen": "1.0.0",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.console": "0.2.13",
-    "org.apache.cordova.media": "0.2.16",
     "org.apache.cordova.file": "1.3.3"
 }
 // BOTTOM OF METADATA
