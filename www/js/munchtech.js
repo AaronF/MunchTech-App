@@ -91,7 +91,7 @@ function loadMainFeed(){
             // munchtech.showPreloader('Custom Title');
         },
         success: function (data){
-            console.log(JSON.stringify(data));
+            // console.log(JSON.stringify(data));
             $list = $("#feed-list");
             $list.empty();
             var items = data.responseData.feed.entries;
@@ -117,7 +117,7 @@ function loadMainFeed(){
 
                 $list.append(listAppend);
             }
-            // $list.collapsibleset('refresh');
+            $list.collapsibleset('refresh');
         },
         error: function (data){
             alert("Error: "+JSON.stringify(data));
