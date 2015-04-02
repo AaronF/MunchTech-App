@@ -32,3 +32,8 @@ hr {
 .mt-blue {
     color: #3598EF;
 }
+
+.button {
+    color: #3598EF;
+    border-color: #3598EF;
+}

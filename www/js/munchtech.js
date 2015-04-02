@@ -107,11 +107,11 @@ function loadMainFeed(){
                 listAppend += "<div class='card episode'>";
                     listAppend += "<div class='card-header'>"+title+"</div>";
                     listAppend += "<div class='card-content'>";
-                        listAppend += "<div class='card-content-inner'><p class='color-gray'>"+publishedDate+"</p>"+content+"</div>";
+                        listAppend += "<div class='card-content-inner'><p class='color-gray'>"+publishedDate+"</p><p>"+content+"</p></div>";
                     listAppend += "</div>";
                     listAppend += "<div class='card-footer'>";
                         listAppend += "<a href='"+link+"' class='openMore more link'>More</a>";
-                        listAppend += "<a href='#' class='button right'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
+                        listAppend += "<a href='#' class='button right mt-blue'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
                     listAppend += "</div>";
                 listAppend += "</div>";
 
