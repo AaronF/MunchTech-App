@@ -1,0 +1,30 @@
+.tab-link i {
+    font-size: 150%;
+}
+
+.statusbar-overlay {
+    background-color: #3598EF;
+}
+
+.navbar {
+    background-color: #3598EF;
+    color: #FFF;
+}
+
+.navbar a {
+    color: #FFF;
+}
+
+.tabbar a.active {
+    color: #3598EF;
+}
+
+.content-block {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e1e1e1;
+}

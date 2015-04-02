@@ -90,8 +90,8 @@ function loadMainFeed(){
         //    munchtech.showIndicator();
             // munchtech.showPreloader('Custom Title');
         },
-        success: function(data){
-            console.log(JSON.stringify(data));
+        success: function (data){
+            // console.log(JSON.stringify(data));
             $list = $("#feed-list");
             $list.empty();
             var items = data.responseData.feed.entries;
@@ -110,7 +110,7 @@ function loadMainFeed(){
                         listAppend += "<div class='card-content-inner'><p class='color-gray'>"+publishedDate+"</p>"+content+"</div>";
                     listAppend += "</div>";
                     listAppend += "<div class='card-footer'>";
-                        listAppend += "<a href='#' class='link'>More</a>";
+                        listAppend += "<a href='javascript:;' class='openURL' data-url='http://google.com'  class='link'>More</a>";
                         listAppend += "<a href='#' class='link right'>Play</a>";
                     listAppend += "</div>";
                 listAppend += "</div>";
@@ -119,8 +119,25 @@ function loadMainFeed(){
             }
             // $list.collapsibleset('refresh');
         },
-        error: function(data){
+        error: function (data){
             alert("Error: "+JSON.stringify(data));
         }
     });
 }
+
+function openURL(url){
+    var ref = window.open(url, '_blank', 'location=no,closebuttoncaption=Close');
+}
+
+$(".openURL").on("click", function(e){
+    e.preventDefault();
+    var url = $(this).attr("href");
+    if(url){
+        openURL(url);
+    }
+});
+
+$('.openURL').live('click', function() {
+    alert('Thank you for clicking');
+    return false;
+});

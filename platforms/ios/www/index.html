@@ -9,6 +9,10 @@
 	<title>MunchTech</title><!-- Path to Framework7 Library CSS-->
 	<link href="css/framework7.min.css" rel="stylesheet"><!-- Path to your custom app styles-->
 	<link href="css/my-app.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet"/>
+	<script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
 </head>
 
 <body>
@@ -44,6 +48,7 @@
                         <div class="content-block" id="feed-list">
 
                         </div>
+						<br><br><br>
         			</div>
         		</div>
         	</div>
@@ -53,7 +58,7 @@
         	<div class="navbar">
         		<div class="navbar-inner">
         			<div class="center">
-        				Other
+        				About
         			</div>
         		</div>
         	</div>
@@ -61,9 +66,59 @@
         	<div class="pages navbar-fixed">
         		<div class="page" data-page="home-2">
         			<div class="page-content">
-        				<div class="content-block">
-        					<p>This is view 2</p>
-        				</div>
+						<div class="content-block">
+							<div class='card'>
+			                    <div class='card-header'>Overview</div>
+			                    <div class='card-content'>
+			                        <div class='card-content-inner'>
+										<p>MunchTech currently produces The Two Techies podcast which is a weekly roundup of the latest tech news.</p>
+
+										<p>Established late 2009, MunchTech started off with only one show – The Two Techies. Later in 2010 the introduction of two new shows turned MunchTech into a more expansive and diverse network. Early 2011 saw an introduction of two more shows. At it’s peak, MunchTech simultaneously produced 7 shows, 5 of which on a weekly basis.</p>
+									</div>
+			                    </div>
+			                </div>
+
+							<div class='card'>
+			                    <div class='card-header'>A bit of history</div>
+			                    <div class='card-content'>
+			                        <div class='card-content-inner'>
+										<p>Jamie &amp; Aaron first started off with a single show called “The Two Techies” which they started due to their interest in technology. After announcing the network MunchTech, it later expanded with the introduction of Podcast Assist, The Saturday Show (formerly MunchTech Discussions), Social Media Weekly and iPlanet, however Podcast Assist and The Saturday Show were later discontinued. As of December 27th 2011 the network has produced more than 230 episodes of it’s shows.</p>
+
+										<p>As of December 8th 2012, both iPlanet and Social Media Weekly were discontinued. MunchTech’s only show is now The Two Techies. Not only will this allow us to focus on producing a better weekly episode of The Two Techies, but it will also allow us to focus on improving the quality of our delivery in both stories and overall quality.</p>
+									</div>
+			                    </div>
+			                </div>
+
+							<div class='card'>
+			                    <div class='card-header'>Other</div>
+			                    <div class='card-content'>
+			                        <div class='card-content-inner'>
+										<p>
+											Want to learn about podcasting? What equipment to buy? What software to use? - Try <a href="http://podcastassist.com" class="openURL">PodcastAssist.com</a> today!
+										</p>
+										<p>Visit the full site - <a href="http://munchtech.tv" class="openURL">MunchTech.tv</a></p>
+
+										<br>
+										<hr>
+										<br>
+
+										<p>
+											<center>
+												<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" class="openURL">
+													<img style="border-width: 0;" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" alt="Creative Commons License">
+												</a>
+											</center>
+										</p>
+										<p style="text-align: center;">Podcasts by <a href="http://munchtech.tv" rel="cc:attributionURL" class="openURL">MunchTech</a> are licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" class="openURL">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.</p>
+
+										<p style="text-align: center;">Based on work at <a href="http://munchtech.tv" rel="dct:source" class="openURL">munchtech.tv</a>.</p>
+
+										<p style="text-align: center;">Permissions beyond the scope of this license may be available at <a href="http://munchtech.tv/about/" rel="cc:morePermissions" class="openURL">http://munchtech.tv/about/</a>.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br><br><br>
         			</div>
         		</div>
         	</div>
@@ -72,14 +127,12 @@
         <div class="toolbar tabbar tabbar-labels">
             <div class="toolbar-inner">
                 <a href="#tab1" class="tab-link active">
-                    <i class="icon demo-icon-1"></i>
-                    <span class="tabbar-label">Label 1</span>
+                    <i class="fa fa-home"></i>
+                    <span class="tabbar-label">Home</span>
                 </a>
                 <a href="#tab2" class="tab-link">
-                    <i class="icon demo-icon-2">
-                        <span class="badge bg-red">5</span>
-                    </i>
-                    <span class="tabbar-label">Label 2</span>
+                    <i class="fa fa-info"></i>
+                    <span class="tabbar-label">About</span>
                 </a>
             </div>
         </div>
@@ -89,5 +142,8 @@
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 	<script src="js/framework7.min.js" type="text/javascript"></script> <!-- Path to your app js-->
 	<script src="js/munchtech.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
