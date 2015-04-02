@@ -91,7 +91,7 @@ function loadMainFeed(){
             // munchtech.showPreloader('Custom Title');
         },
         success: function (data){
-            // console.log(JSON.stringify(data));
+            console.log(JSON.stringify(data));
             $list = $("#feed-list");
             $list.empty();
             var items = data.responseData.feed.entries;
@@ -104,14 +104,14 @@ function loadMainFeed(){
                 var content = items[i].content;
                 var publishedDate = items[i].publishedDate;
 
-                listAppend += "<div class='card'>";
+                listAppend += "<div class='card episode'>";
                     listAppend += "<div class='card-header'>"+title+"</div>";
                     listAppend += "<div class='card-content'>";
                         listAppend += "<div class='card-content-inner'><p class='color-gray'>"+publishedDate+"</p>"+content+"</div>";
                     listAppend += "</div>";
                     listAppend += "<div class='card-footer'>";
-                        listAppend += "<a href='javascript:;' class='openURL' data-url='http://google.com'  class='link'>More</a>";
-                        listAppend += "<a href='#' class='link right'>Play</a>";
+                        listAppend += "<a href='"+link+"' class='openMore more link'>More</a>";
+                        listAppend += "<a href='#' class='button right'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
                     listAppend += "</div>";
                 listAppend += "</div>";
 
@@ -137,7 +137,10 @@ $(".openURL").on("click", function(e){
     }
 });
 
-$('.openURL').live('click', function() {
-    alert('Thank you for clicking');
-    return false;
+$(".episodes").on("click touchstart", ".openMore", function(e){
+    e.preventDefault();
+    var url = $(this).attr("href");
+    if(url){
+        openURL(url);
+    }
 });
