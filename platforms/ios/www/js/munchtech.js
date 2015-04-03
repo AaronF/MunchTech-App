@@ -84,25 +84,25 @@ function loadMainFeed(){
     var url = "http://munchtech.tv/feed/";
 
     $.ajax({
-        url: 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + entriesToShow + '&q=' +  encodeURI(url),
+        type: "GET",
+        url: 'http://app.munchtech.tv/rss_feed.php?m=mt',
         dataType: 'json',
         beforeSend: function () {
         //    munchtech.showIndicator();
             // munchtech.showPreloader('Custom Title');
         },
         success: function (data){
-            // console.log(JSON.stringify(data));
+            console.log(JSON.stringify(data));
             $list = $("#feed-list");
             $list.empty();
-            var items = data.responseData.feed.entries;
+            var items = data.episodes;
             for (var i = 0; i < items.length; i++) {
                 var listAppend = "";
                 var title = items[i].title;
                 var link = items[i].link;
-                var author = items[i].author;
-                var contentSnippet = items[i].contentSnippet;
-                var content = items[i].content;
-                var publishedDate = items[i].publishedDate;
+                var content = items[i].desc;
+                var publishedDate = items[i].date;
+                var episode = items[i].episode;
 
                 listAppend += "<div class='card episode'>";
                     listAppend += "<div class='card-header'>"+title+"</div>";
@@ -111,18 +111,19 @@ function loadMainFeed(){
                     listAppend += "</div>";
                     listAppend += "<div class='card-footer'>";
                         listAppend += "<a href='"+link+"' class='openMore more link'>More</a>";
-                        listAppend += "<a href='#' class='button right mt-blue'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
+                        listAppend += "<a href='"+episode+"' class='playMedia button right mt-blue'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
                     listAppend += "</div>";
                 listAppend += "</div>";
 
                 $list.append(listAppend);
             }
-            $list.collapsibleset('refresh');
+            // $list.collapsibleset('refresh');
         },
         error: function (data){
             alert("Error: "+JSON.stringify(data));
         }
     });
+    return false;
 }
 
 function openURL(url){
@@ -144,3 +145,17 @@ $(".episodes").on("click touchstart", ".openMore", function(e){
         openURL(url);
     }
 });
+
+$(".episodes").on("click touchstart", ".playMedia", function(e){
+    e.preventDefault();
+    var url = $(this).attr("href");
+    if(url){
+        openURL(url);
+    }
+});
+
+
+
+function playMedia(src){
+
+}
