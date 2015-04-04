@@ -88,7 +88,7 @@ function loadMainFeed(){
         url: 'http://app.munchtech.tv/rss_feed.php?m=mt',
         dataType: 'json',
         beforeSend: function () {
-        //    munchtech.showIndicator();
+            // munchtech.showIndicator();
             // munchtech.showPreloader('Custom Title');
         },
         success: function (data){
@@ -111,7 +111,7 @@ function loadMainFeed(){
                     listAppend += "</div>";
                     listAppend += "<div class='card-footer'>";
                         listAppend += "<a href='"+link+"' class='openMore more link'>More</a>";
-                        listAppend += "<a href='"+episode+"' class='playMedia button right mt-blue'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
+                        listAppend += "<a href='"+episode+"' class='playMedia button right mt-blue' onclick='return: false;'>Play &nbsp;<i class='fa fa-play mt-blue'></i></a>";
                     listAppend += "</div>";
                 listAppend += "</div>";
 
@@ -127,13 +127,18 @@ function loadMainFeed(){
 
 function openURL(url){
     var ref = window.open(url, '_blank', 'location=no,closebuttoncaption=Close');
+    ref.addEventListener('exit', loadStopButton);
 }
 
-$(".openURL").on("click", function(e){
+function loadStopButton(){
+    $(".button").removeClass("active-state");
+}
+
+$(".external").on("click", function(e){
     e.preventDefault();
     var url = $(this).attr("href");
     if(url){
-        openURL(url);
+        var ref = window.open(url, '_system');
     }
 });
 
@@ -152,20 +157,3 @@ $(".episodes").on("click touchstart", ".playMedia", function(e){
         openURL(url);
     }
 });
-
-
-function playAudio(url) {
-    // Play the audio file at url
-    var my_media = new Media(url,
-        // success callback
-        function () {
-            console.log("playAudio():Audio Success");
-        },
-        // error callback
-        function (err) {
-            console.log("playAudio():Audio Error: " + err);
-        }
-    );
-    // Play audio
-    my_media.play();
-}

@@ -55,6 +55,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D74B5A60285C40FEB9633C47 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DAF756A7184E9A8CF69432 /* CDVConnection.m */; };
 		E66216CA546949A3A3E06EDA /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD0013E296418191A8F8D8 /* CDVLocalFilesystem.m */; };
+		6B0888A4FB58438780A11BA3 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A71023339A024145A3FE21B7 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		EF774360B2FA40D6B819A29E /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVAssetLibraryFilesystem.h; path = org.apache.cordova.file/CDVAssetLibraryFilesystem.h; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = MunchTech/config.xml; sourceTree = "<group>"; };
 		F9796968BD024EA3B85F30C5 /* CDVFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = org.apache.cordova.file/CDVFile.h; sourceTree = "<group>"; };
+		A71023339A024145A3FE21B7 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "org.apache.cordova.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		78785CEBE2B44724AF7D4A3F /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +278,8 @@
 				CB7EFA5CA6C54DB4A475D0B4 /* CDVInAppBrowser.h */,
 				287DF47164E84A09BEBD8CCE /* CDVLogger.m */,
 				C8B8F7B9435944A99664AD23 /* CDVLogger.h */,
+				A71023339A024145A3FE21B7 /* CDVStatusBar.m */,
+				78785CEBE2B44724AF7D4A3F /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = MunchTech/Plugins;
@@ -477,6 +482,7 @@
 				B5F211F1AE1547BBA077DDF5 /* CDVSplashScreen.m in Sources */,
 				5E87ECA73BEA4AB6A60327D3 /* CDVInAppBrowser.m in Sources */,
 				C3134A3A2CE24778A68A1E44 /* CDVLogger.m in Sources */,
+				6B0888A4FB58438780A11BA3 /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

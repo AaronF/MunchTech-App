@@ -86,6 +86,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
+        "id": "org.apache.cordova.statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -243,6 +250,7 @@ module.exports.metadata =
     "org.apache.cordova.splashscreen": "1.0.0",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.console": "0.2.13",
+    "org.apache.cordova.statusbar": "0.1.10",
     "org.apache.cordova.file": "1.3.3"
 }
 // BOTTOM OF METADATA
