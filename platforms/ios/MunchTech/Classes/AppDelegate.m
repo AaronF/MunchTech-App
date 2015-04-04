@@ -27,6 +27,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 #import <Cordova/CDVPlugin.h>
 
@@ -77,6 +78,11 @@
 #else
         self.viewController = [[[MainViewController alloc] init] autorelease];
 #endif
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    BOOL ok;
+    NSError *setCategoryError = nil;
+    ok = [audioSession setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
 
     // Set your app's start page by setting the <content src='foo.html' /> tag in config.xml.
     // If necessary, uncomment the line below to override it.
