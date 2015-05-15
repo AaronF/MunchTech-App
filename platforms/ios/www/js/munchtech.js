@@ -80,6 +80,8 @@ feedrefresh.on('refresh', function (e) {
 });
 
 function loadMainFeed(){
+    $("#feed-list").html("");
+
     var entriesToShow = 20;
     var url = "http://munchtech.tv/feed/";
 
@@ -87,14 +89,14 @@ function loadMainFeed(){
         type: "GET",
         url: 'http://app.munchtech.tv/rss_feed.php?m=mt',
         dataType: 'json',
+        cache: false,
         beforeSend: function () {
             // munchtech.showIndicator();
             // munchtech.showPreloader('Custom Title');
         },
         success: function (data){
-            console.log(JSON.stringify(data));
             $list = $("#feed-list");
-            $list.empty();
+            $list.html("");
             var items = data.episodes;
             for (var i = 0; i < items.length; i++) {
                 var listAppend = "";

@@ -3,11 +3,11 @@
 }
 
 .statusbar-overlay {
-    background-color: #3598EF;
+    background-color: #3498db;
 }
 
 .navbar {
-    background-color: #3598EF;
+    background-color: #3498db;
     color: #FFF;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .tabbar a.active {
-    color: #3598EF;
+    color: #3498db;
 }
 
 .content-block {
@@ -30,10 +30,10 @@ hr {
 }
 
 .mt-blue {
-    color: #3598EF;
+    color: #3498db;
 }
 
 .button {
-    color: #3598EF;
-    border-color: #3598EF;
+    color: #3498db;
+    border-color: #3498db;
 }
